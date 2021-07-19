@@ -19,6 +19,11 @@ const list = [
 
 ];
 
+if (localStorage.getItem('list')) {
+  const getList = JSON.parse(localStorage.getItem('list'));
+  list = getList;
+}
+
 const todoList = document.querySelector('.todoList');
 
 const displayList = (list) => {
