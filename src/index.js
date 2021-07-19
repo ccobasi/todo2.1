@@ -1,13 +1,40 @@
-import _ from 'lodash';
 import './style.css';
 
-function component() {
-  const element = document.createElement('div');
+const list = [
+  {
+    index: 0,
+    description: 'Do laundry',
+    completed: true,
+  },
+  {
+    index: 1,
+    description: 'Go swimming',
+    completed: false,
+  },
+  {
+    index: 2,
+    description: 'Do challenge',
+    completed: false,
+  },
 
-  // Lodash, imported
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+];
 
-  return element;
-}
+const todoList = document.querySelector('.todoList');
 
-document.body.appendChild(component());
+const displayList = (list) => {
+  todoList.innerHTML = '';
+  list.forEach((e) => {
+    const lists = document.createElement('div');
+    lists.innerHTML = `
+    
+      <div class="mini-section item">
+      <input class="check" type="checkbox" id="todo-description" name="todo-description" value="${e.index}">${e.description}
+      <i class="fas fa-ellipsis-v" style="color: gray; float: right;"></i>
+      </div>
+      `;
+
+    todoList.appendChild(lists);
+  });
+};
+
+displayList(list);
