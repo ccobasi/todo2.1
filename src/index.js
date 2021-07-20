@@ -1,5 +1,7 @@
 import './style.css';
-import {reloadContainer,addListeners,dragOver,list} from './drag.js';
+import {
+  reloadContainer, addListeners, dragOver, list,
+} from './drag.js';
 import { getContainer } from './complete.js';
 
 // export const list = [
@@ -34,7 +36,7 @@ const displayList = (list) => {
     const lists = document.createElement('div');
     lists.classList.add('mini-section');
     lists.classList.add('item');
-    lists.setAttribute('draggable', 'true')
+    lists.setAttribute('draggable', 'true');
     lists.innerHTML = `
       <span>
       <input class='check' type='checkbox' id='task-description' name='task-description' value='${e.description}'>${e.description}

@@ -1,5 +1,4 @@
-// import { list } from './index.js';
-
+/* eslint-disable import/no-mutable-exports */
 export let list = [
   {
     index: 0,
