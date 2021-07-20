@@ -1,5 +1,23 @@
+// import { list } from './index.js';
 
+export let list = [
+  {
+    index: 0,
+    description: 'Do laundry',
+    completed: true,
+  },
+  {
+    index: 1,
+    description: 'Go swimming',
+    completed: false,
+  },
+  {
+    index: 2,
+    description: 'Do challenge',
+    completed: false,
+  },
 
+];
 // Add Drag-start and drag-End listeners --- Add Css Class
 const addListeners = (elements) => {
   elements.forEach((item) => {
@@ -13,14 +31,16 @@ const addListeners = (elements) => {
   });
 };
 
+if (localStorage.getItem('list')) {
+  const getList = JSON.parse(localStorage.getItem('list'));
+  list = getList;
+}
+
 /// Code for local Storage Save.
 
 export const saveLocalstorage = () => {
   localStorage.setItem('list', JSON.stringify(list));
 };
-
-// Help save any changes in real time (Save position after DragDrop, etc...)
-//----------------------
 
 export const saveChanges = () => {
   const newList = [];
