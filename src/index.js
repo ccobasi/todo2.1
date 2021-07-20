@@ -13,7 +13,7 @@ const list = [
   },
   {
     index: 2,
-    description: 'Do challenge',
+    description: 'Get grosseries',
     completed: false,
   },
 
