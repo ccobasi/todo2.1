@@ -1,22 +1,7 @@
 /* eslint-disable import/no-mutable-exports */
-export let list = [
-  {
-    index: 0,
-    description: 'Do laundry',
-    completed: true,
-  },
-  {
-    index: 1,
-    description: 'Go swimming',
-    completed: false,
-  },
-  {
-    index: 2,
-    description: 'Do challenge',
-    completed: false,
-  },
+import addTask from './addTask.js';
+export let list = [];
 
-];
 // Add Drag-start and drag-End listeners --- Add Css Class
 const addListeners = (elements) => {
   elements.forEach((item) => {
@@ -59,6 +44,14 @@ export const saveChanges = () => {
       saveLocalstorage(list);
     }
   }
+};
+
+export const inputListener = (input) => {
+  input.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      addTask(input.value);
+    }
+  });
 };
 
 export const reloadContainer = (elements) => {

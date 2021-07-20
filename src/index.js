@@ -1,48 +1,36 @@
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable import/no-cycle */
+/* eslint-disable import/no-duplicates */
 import './style.css';
-import {
-  reloadContainer, addListeners, dragOver, list,
-} from './drag.js';
+import {reloadContainer,addListeners,dragOver,list,inputListener} from './drag.js';
 import { getContainer } from './complete.js';
 
-// export const list = [
-//   {
-//     index: 0,
-//     description: 'Do laundry',
-//     completed: true,
-//   },
-//   {
-//     index: 1,
-//     description: 'Go swimming',
-//     completed: false,
-//   },
-//   {
-//     index: 2,
-//     description: 'Do challenge',
-//     completed: false,
-//   },
+export const todoList = document.querySelector('.todoList');
+export const clearAll = document.querySelector('.clear-all');
 
-// ];
-
-// if (localStorage.getItem('list')) {
-//   const getList = JSON.parse(localStorage.getItem('list'));
-//   list = getList;
-// }
-
-const todoList = document.querySelector('.todoList');
-
-const displayList = (list) => {
+const lists = document.querySelector('.task');
+export const displayList = (list) => {
   todoList.innerHTML = '';
   list.forEach((e) => {
     const lists = document.createElement('div');
     lists.classList.add('mini-section');
     lists.classList.add('item');
     lists.setAttribute('draggable', 'true');
-    lists.innerHTML = `
-      <span>
-      <input class='check' type='checkbox' id='task-description' name='task-description' value='${e.description}'>${e.description}
-      <i class="fas fa-ellipsis-v" style="color: gray; float: right;"></i>
+    if (e.completed === true) {
+      lists.innerHTML = `
+      <span class='desc'>
+      <input class='check' type='checkbox' id='task-description' name='task-description' value='${e.description}' checked = true>${e.description}</input>
+      <i class="fas fa-ellipsis-v ellipsis" style="color: gray; float: right;"></i>
       </span>
       `;
+    } else {
+      lists.innerHTML = `
+      <span>
+      <input class='check' type='checkbox' id='task-description' name='task-description' value='${e.description}'>${e.description}</input>
+      <i class="fas fa-ellipsis-v ellipsis" style="color: gray; float: right;"></i>
+      </span>
+      `;
+    }
 
     todoList.appendChild(lists);
   });
@@ -50,8 +38,9 @@ const displayList = (list) => {
 
 displayList(list);
 getContainer(todoList);
-const items = document.querySelectorAll('.item');
+export const items = document.querySelectorAll('.item');
 
+inputListener(lists);
 addListeners(items);
 dragOver(todoList);
 reloadContainer(items);
