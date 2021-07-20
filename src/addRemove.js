@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import { list, saveChanges, saveLocalstorage } from './drag.js';
 import { todoList } from './index.js';
 

@@ -2,6 +2,10 @@ body {
   background-color: bisque;
 }
 
+i {
+  color: gray;
+}
+
 .wrapper {
   background-color: #fff;
   width: 30%;

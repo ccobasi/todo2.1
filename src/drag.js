@@ -1,6 +1,11 @@
 /* eslint-disable import/no-mutable-exports */
-import addTask from './addTask.js';
+import addTask from './addRemove.js';
 export let list = [];
+
+if (localStorage.getItem('list')) {
+  const getList = JSON.parse(localStorage.getItem('list'));
+  list = getList;
+}
 
 // Add Drag-start and drag-End listeners --- Add Css Class
 const addListeners = (elements) => {
@@ -14,12 +19,6 @@ const addListeners = (elements) => {
     });
   });
 };
-
-if (localStorage.getItem('list')) {
-  const getList = JSON.parse(localStorage.getItem('list'));
-  list = getList;
-}
-
 /// Code for local Storage Save.
 
 export const saveLocalstorage = () => {

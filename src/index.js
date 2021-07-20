@@ -4,14 +4,17 @@
 import './style.css';
 import {reloadContainer,addListeners,dragOver,list,inputListener} from './drag.js';
 import { getContainer } from './complete.js';
+import editListener from './edit.js';
 
 export const todoList = document.querySelector('.todoList');
 export const clearAll = document.querySelector('.clear-all');
-
+export const items = document.querySelectorAll('.item');
 const lists = document.querySelector('.task');
+
 export const displayList = (list) => {
-  todoList.innerHTML = '';
+  
   list.forEach((e) => {
+    todoList.innerHTML = '';
     const lists = document.createElement('div');
     lists.classList.add('mini-section');
     lists.classList.add('item');
@@ -38,9 +41,8 @@ export const displayList = (list) => {
 
 displayList(list);
 getContainer(todoList);
-export const items = document.querySelectorAll('.item');
-
 inputListener(lists);
 addListeners(items);
 dragOver(todoList);
+editListener();
 reloadContainer(items);

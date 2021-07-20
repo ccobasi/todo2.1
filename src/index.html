@@ -11,40 +11,24 @@
 </head>
 <body>
     
-    <div class="container">
-        <div class="row">
-            <div class="col mx-auto col-md-8 mt-3 text-center">
-                <div class="alert align-items-center" id="message"></div>
-                <form id="todoForm" >
-                    <h3 class=""> Today's Todo</h3>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control"  id="todoInput" value="" placeholder="Add to your list...">
-                        <button class="btn btn-outline-primary">ADD TODO</button>
+    >
+                <div class="wrapper">
+                    <div class="mini-section title">   
+                        <p>Today's To Do</p>
+                        <i class="fas fa-sync-alt"></i>
                     </div>
-                </form>
-                <ul class="nav nav-tabs">
-                    <li class="nav-item" data-type="all">
-                      <a class="nav-link active" href="#">All</a>
-                    </li>
-                    <li class="nav-item" data-type="todo">
-                      <a class="nav-link" href="#">To Do</a>
-                    </li>
-                    <li class="nav-item" data-type="done">
-                      <a class="nav-link" href="#">Completed</a>
-                    </li>
-                  </ul>
-                <!-- list items -->
-                <ul class="list-group list-group-flush" id="itemList"></ul>
-                <input type="hidden" id="filterType" value="all">
-                <input type="hidden" id="citem" value="">
-                <div class="todoList">
+                    <div class="mini-section do">
+                        <input type="text" placeholder="Add to your list..." class="task">
+                        <i class="fas fa-level-down-alt fa-rotate-90"></i>
+                    </div>
+                    <div class="todoList">
         
+                    </div>
+                    <div class="clear-all">
+                        <p>Clear all completed</p>
+                    </div>
                 </div>
         
-            </div>
-        </div>
-   
-    </div>
 <script src="main.js"></script>
 </body>
 </html>
