@@ -1,5 +1,7 @@
 import './style.css';
-import {reloadContainer, addListeners, dragOver, list,} from './drag.js';
+import {
+  reloadContainer, addListeners, dragOver, list,
+} from './drag.js';
 import { getContainer } from './complete.js';
 
 const todoList = document.querySelector('.todoList');
