@@ -3,6 +3,7 @@ import { list, saveChanges, saveLocalstorage } from './drag.js';
 import { todoList } from './index.js';
 
 export default function addTask(lists) {
+  todoList.innerHTML = '';
   const newTask = document.createElement('div');
   newTask.classList.add('mini-section');
   newTask.classList.add('item');
