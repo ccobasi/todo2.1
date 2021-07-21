@@ -1,32 +1,6 @@
 import './style.css';
-import {
-  reloadContainer, addListeners, dragOver, list,
-} from './drag.js';
+import {reloadContainer, addListeners, dragOver, list,} from './drag.js';
 import { getContainer } from './complete.js';
-
-// export const list = [
-//   {
-//     index: 0,
-//     description: 'Do laundry',
-//     completed: true,
-//   },
-//   {
-//     index: 1,
-//     description: 'Go swimming',
-//     completed: false,
-//   },
-//   {
-//     index: 2,
-//     description: 'Do challenge',
-//     completed: false,
-//   },
-
-// ];
-
-// if (localStorage.getItem('list')) {
-//   const getList = JSON.parse(localStorage.getItem('list'));
-//   list = getList;
-// }
 
 const todoList = document.querySelector('.todoList');
 
