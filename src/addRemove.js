@@ -2,7 +2,7 @@
 import { list, saveChanges, saveLocalstorage } from './drag.js';
 import { todoList } from './index.js';
 
-export default function addTask(lists) {
+export default function addTask(lists) {  
   todoList.innerHTML = '';
   const newTask = document.createElement('div');
   newTask.classList.add('mini-section');
@@ -16,6 +16,6 @@ export default function addTask(lists) {
   `;
   todoList.appendChild(newTask);
   saveChanges();
-  saveLocalstorage(list);
-  document.location.reload(true);
+  saveLocalstorage(newTask);
+  // document.location.reload(true);
 }
