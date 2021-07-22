@@ -83,14 +83,18 @@ i {
   cursor: move;
 }
 
-.trash {
+.fas:hover {
+  cursor: pointer;
+}
+
+/* .trash {
   float: right;
 }
 
 .trash:hover {
   cursor: pointer;
   color: rgb(241, 198, 198);
-}
+} */
 
 .invalid {
   outline-color: rgb(241, 198, 198);
