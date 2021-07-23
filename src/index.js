@@ -1,18 +1,19 @@
-// * eslint-disable import/no-cycle */
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable import/no-cycle */
 /* eslint-disable import/no-duplicates */
-
+import './style.css';
 import {
   reloadContainer,
   addListeners,
   dragOver,
   list,
-  editListener,
   deleteAll,
-  deleteItem,
+  inputListener,
 } from './drag.js';
-import { inputListener } from './drag.js';
-import './style.css';
+import { deleteItem } from './addRemove.js';
 import { getContainer } from './complete.js';
+import editListener from './edit.js';
+
 export const todoList = document.querySelector('.todoList');
 export const clearAll = document.querySelector('.clear-all');
 
