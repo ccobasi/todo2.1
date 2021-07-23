@@ -2,7 +2,8 @@
 /* eslint-disable import/no-mutable-exports,  */
 /* eslint-disable import/no-cycle */
 /* eslint-disable no-loop-func */
-import { clearAll } from './index.js';
+
+import { clearAll, del } from './index.js';
 import addTask from './addRemove.js';
 
 export let list = [];
@@ -98,6 +99,15 @@ export const dragOver = (container) => {
     } else {
       container.insertBefore(draggable, afterElement);
     }
+  });
+};
+
+export const deleteItem = () => {
+  del.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.target.parentElement.parentElement.remove();
+    saveChanges();
+    document.location.reload(true);
   });
 };
 

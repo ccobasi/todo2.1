@@ -80,21 +80,16 @@ i {
 
 .dragging {
   opacity: 0.5;
-  cursor: move;
 }
 
-.fas:hover {
-  cursor: pointer;
-}
-
-/* .trash {
+.trash {
   float: right;
 }
 
 .trash:hover {
   cursor: pointer;
   color: rgb(241, 198, 198);
-} */
+}
 
 .invalid {
   outline-color: rgb(241, 198, 198);
@@ -107,18 +102,3 @@ i {
 .ellipsis:hover {
   cursor: move;
 }
-
-.green {
-  color: lightgreen;
-}
-
-.red {
-  color: lightcoral;
-}
-
-.blue {
-  color: skyblue;
-}
-#itemList { font-size: 1.5rem; }
-.show { display: block; }
-.hide { display: none; }

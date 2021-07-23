@@ -27,9 +27,9 @@ export default function editListener() {
             items[i].firstChild.nextSibling.removeChild(items[i].children[0].children[0]);
 
             items[i].firstChild.nextSibling.innerHTML = `
-             <input class='check' type='checkbox' id='task-description' name='task-description' value='${newInput.value}'>${newInput.value}
-             <i class="fas fa-ellipsis-v ellipsis" style="color: gray; float: right;"></i>
-            `;
+           <input class='check' type='checkbox' id='task-description' name='task-description' value='${newInput.value}'>${newInput.value}
+           <i class="fas fa-ellipsis-v ellipsis" style="color: gray; float: right;"></i>
+          `;
             list[i].description = newInput.value;
             list[i].completed = false;
             saveChanges();
