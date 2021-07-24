@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpack Exercise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>TodoList</title>
 <script defer src="main.js"></script></head>
 <body>
-    <h1>Hello Chukwuma !</h1>
+    <div class="wrapper">
+        <div class="mini-section title">   
+            <p>Today's To Do</p>
+            <i class="fas fa-sync-alt"></i>
+        </div>
+        <div class="mini-section do">
+            <input type="text" placeholder="Add to your list..." class="task">
+            <i class="fas fa-level-down-alt fa-rotate-90"></i>
+        </div>
+        <div class="todoList">
+            
+        </div>
+        <div class="clear-all">
+            <p>Clear all completed</p>
+        </div>
+    </div>
 </body>
 </html>

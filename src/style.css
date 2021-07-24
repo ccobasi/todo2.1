@@ -1,3 +1,104 @@
 body {
-  background-color: bisque;
+  background-color: #eee;
+}
+
+i {
+  color: gray;
+}
+
+.wrapper {
+  background-color: #fff;
+  width: 30%;
+  margin: 100px auto;
+  border: 1px solid #eee;
+  padding: 5px 0 0 0;
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.wrapper p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.mini-section {
+  border-bottom: 1px solid rgb(224, 224, 224);
+  margin: 0;
+  padding: 10px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task {
+  border: none;
+  font-style: italic;
+  width: 90%;
+  padding: 8px;
+}
+
+.task:focus {
+  outline: none;
+}
+
+.do {
+  padding: 5px;
+  display: flex;
+}
+
+.clear-all {
+  padding: 5px;
+  text-align: center;
+  color: grey;
+  background-color: rgb(241, 241, 241);
+}
+
+.clear-all p {
+  padding: 10px;
+  font-size: 15px;
+}
+
+.item {
+  padding: 1rem;
+  background-color: rgb(247, 247, 247);
+}
+
+.clear-all p:hover,
+.item:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.check {
+  width: 10px;
+  margin: 0 10px;
+}
+
+.desc {
+  text-decoration: line-through;
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+.trash {
+  float: right;
+}
+
+.trash:hover {
+  cursor: pointer;
+  color: rgb(241, 198, 198);
+}
+
+.invalid {
+  outline-color: rgb(241, 198, 198);
+}
+
+.clear-all:hover {
+  cursor: pointer;
+}
+
+.ellipsis:hover {
+  cursor: move;
 }
