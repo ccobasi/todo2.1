@@ -16,7 +16,7 @@ This app is extremely simple but could still be used to manage your daily, weekl
 
 ## Live Demo
 
-To see a live demo of this project please follow the next section "getting started".
+[Live Demo Link](https://ccobasi.github.io/todo2.1/)
 
 ## Getting Started
 
