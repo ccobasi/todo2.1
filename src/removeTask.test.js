@@ -8,7 +8,6 @@ const deleteItem = require('./removeTask.js');
 describe('Remove task', () => {
   document.body.innerHTML = '';
   test('Second test', () => {
-
     const testButton = listDiv.children[0].children[0].children[0];
 
     deleteItem(testButton);
