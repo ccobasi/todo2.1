@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-const addTask = require('./addTask.js');
+import addTask from './addTask.js';
 
 describe('Add new task', () => {
   test('First test', () => {
